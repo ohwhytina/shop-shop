@@ -10,6 +10,9 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 import OrderHistory from "./pages/OrderHistory";
+import Success from './pages/Success'
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -23,11 +26,14 @@ const client = new ApolloClient({
   uri: '/graphql',
 })
 
+
+
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
         <div>
+          <Provider store={store}>
           <Nav />
           <Switch>
             <Route exact path="/" component={Home} />
@@ -35,8 +41,10 @@ function App() {
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/orderHistory" component={OrderHistory} />
             <Route exact path="/products/:id" component={Detail} />
+            <Route exact path="/success" component={Success} />
             <Route component={NoMatch} />
           </Switch>
+          </Provider>
         </div>
       </Router>
     </ApolloProvider>
@@ -44,4 +52,6 @@ function App() {
   );
 }
 
+
+//redux change
 export default App;
