@@ -10,7 +10,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function ProductList() {
 
-
   const state = useSelector((state) => {
     return state
   });
