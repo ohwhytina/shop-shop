@@ -15,9 +15,9 @@ E-commerce platform that uses Redux to manage global state.
 ## Installation
 git clone or download files. 'npm install' then 'npm run start'
 
-![Link to Application](https://tina-shop-shop.herokuapp.com/)
+[Link to Application](https://tina-shop-shop.herokuapp.com/)
 
-![Demo]()
+![Demo](https://github.com/ohwhytina/shop-shop/blob/main/img/Shop-Shop.gif?raw=true)
 
 ## Usage
 npm install graphql, redux, react-redux, stripe
